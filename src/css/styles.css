@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* body */
+:root {
+  /* Primary */
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: rgb(170, 92, 219);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-background);
+}
+
+h2,
+p {
+  color: var(--white);
+}
+
+p {
+  line-height: 1.6;
+  font-size: 15px;
+  color: var(--main-paragraph);
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+span {
+  color: var(--accent);
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 5% 6%;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  align-self: center;
+}
+
+.card {
+  background: var(--card-background);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info {
+  padding: 10%;
+}
+
+.card-info h2 {
+  padding-bottom: 10%;
+}
+
+.card-info p {
+  padding: auto 10px auto 10px;
+}
+
+.stat-info h2 {
+  padding-bottom: 1%;
+}
+
+.stat-info p {
+  font-size: 12px;
+  padding-bottom: 7%;
+  letter-spacing: 1px;
+}
+
+.border {
+  border-radius: 0 0 5px 5px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-info p {
+  text-transform: uppercase;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0.7;
+} */
+
+@media (min-width: 1006px) {
+  .container,
+  .stats {
+    flex-direction: row;
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+
+  .stats {
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-left: 2%;
+  }
+
+  .stat-info {
+    text-align: left;
+  }
+
+  .card-info {
+    padding: 10%;
+    text-align: left;
+    width: 50ch;
+  }
+
+  img {
+    border-radius: 0 5px 5px 0;
+    width: 100%;
+  }
+
+  .border {
+    border-radius: 5px 0 0 5px;
+    padding-right: 3em;
+  }
+
+  .card {
+    justify-content: center;
+  }
+}
